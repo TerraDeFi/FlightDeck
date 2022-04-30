@@ -1,13 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Dashboard from './pages/Dashboard.js';
+import Anchor from './pages/Anchor.js';
 import reportWebVitals from './reportWebVitals';
+
+import './index.css';
+// import { Route } from 'react-router-dom';
+// import { Router } from 'react-bootstrap-icons';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/anchor">Anchor</Link>
+          </li>
+          <li>
+            <Link to="/cyber">Cyber Deck</Link>
+          </li>
+        </ul>
+        <Routes>
+          <Route exact path="/" element={<Dashboard />} />
+          <Route path="/anchor" element={<Anchor />} />
+          {/* <Route path="/cyber"><Cyber /></Route> */}
+        </Routes>
+      </div>
+
+    </Router>
   </React.StrictMode>
 );
 
