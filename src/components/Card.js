@@ -1,3 +1,18 @@
+/**
+ * 
+ * This is component for type of card panel.
+ * This use to individual panels of Dashboard page.
+ * 
+ * @data 2022-04-29 
+ * @author Monte Carlo
+ * @license 
+ * @github
+ * @param name Title of panel           <h4>{name}</h4>
+ * @param height Height of panel        height: height
+ * @param component Content of panel    {component}
+ * 
+ */
+
 import React, { useState } from 'react';
 
 const Card = ({ name, height, component }) => {

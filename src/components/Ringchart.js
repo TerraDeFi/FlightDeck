@@ -1,67 +1,167 @@
-import React, { useEffect } from "react";
-import ReactDOM from "react-dom";
-import { Doughnut, Pie } from "react-chartjs-2";
-import { chartColors } from "./Colors";
+import {Doughnut} from 'react-chartjs-2';
+import Chart from 'chart.js/auto';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-import "./Ringchart.css";
-import { TextCenter } from "react-bootstrap-icons";
-
-const options = {
-  legend: {
-    display: true,
-    position: "right"
-  },
-  elements: {
-    arc: {
-      borderWidth: 0
-    }
+const counter = {
+  id: 'counter',
+  beforeInit: function (chart) {
+    // Get reference to the original fit function
+    const originalFit = chart.legend.fit;
+    // Override the fit function
+    chart.legend.fit = function fit() {
+    // Call original function and bind scope in order to use `this` correctly inside it
+    originalFit.bind(chart.legend)();
+    this.height += 35;
+    };
   }
-};
-
-const data = {
-  maintainAspectRatio: true,
-  responsive: true,
-  labels: ["Luna", "UST"],
-  datasets: [
-    {
-      data: [200000, 500000],
-      backgroundColor: chartColors,
-      hoverBackgroundColor: chartColors
-    }
-  ]
-};
-
-function Ringchart() {
-
-  return (
-    <div className="Lingchart">
-      <div style={styles.relative}>
-        <Doughnut
-            data={data}
-            options={options}
-        />
-        <div style={styles.pieContainer}>
-          {/* <span>Assets</span> */}
-        </div>
-        <div id="legend" />
-      </div>
-    </div>
-  );
 }
 
-const styles = {
-  pieContainer: {
-    width: "40%",
-    height: "40%",
-    textAlign: "center",
-    top: "-50%",
-    left: "50%",
-    position: "relative",
-    transform: "translate(-50%, -50%)"
-  },
-  relative: {
-    position: "relative"
+var DATA_COUNT = 10;
+var labels = [];
+for (var i = 0; i < DATA_COUNT; ++i) {
+  labels.push('' + i);
+}
+
+Chart.register(ChartDataLabels, counter);
+
+
+const data = {
+  labels: ['Luna','UST'],
+  datasets: [
+      {
+          label: 'Attendance for Week 1',
+          data: [200000, 500000],
+          borderColor: ['rgba(255,206,86,0.2)'],
+          backgroundColor: ['#0DCAF0', '#C72377' ],
+          pointBackgroundColor: 'rgba(255,206,86,0.2)',
+      }
+  ]
+}
+
+const options = {
+  responsive: true,
+  maintainAspectRatio: true,
+  plugins: {
+      title: {
+          display: false,
+          text: 'Doughnut Chart',
+          color:'blue',
+          font: {
+              size:34
+          },
+          padding:{
+              top:30,
+              bottom:30
+          },
+          responsive:true,
+          animation:{
+              animateScale: true,
+                         }
+      },
+      labels: {
+        render: 'percentage',
+        fontColor: ['green', 'white', 'red'],
+        precision: 2
+      }
   }
-};
+
+}
+
+function Ringchart() {
+  return (
+    <div>
+        <Doughnut data={data} options={options} />
+    </div>
+  )
+}
 
 export default Ringchart
+
+
+// {
+//   type: 'doughnut',
+//   data: {
+//     labels: labels,
+//     datasets: [{
+//       backgroundColor: Utils.colors({
+//         color: Utils.color(0),
+//         count: DATA_COUNT
+//       }),
+//       data: Utils.numbers({
+//         count: DATA_COUNT,
+//         min: 0,
+//         max: 100
+//       }),
+//       datalabels: {
+//         anchor: 'end'
+//       }
+//     }, {
+//       backgroundColor: Utils.colors({
+//         color: Utils.color(1),
+//         count: DATA_COUNT
+//       }),
+//       data: Utils.numbers({
+//         count: DATA_COUNT,
+//         min: 0,
+//         max: 100
+//       }),
+//       datalabels: {
+//         anchor: 'center',
+//         backgroundColor: null,
+//         borderWidth: 0
+//       }
+//     }, {
+//       backgroundColor: Utils.colors({
+//         color: Utils.color(2),
+//         count: DATA_COUNT
+//       }),
+//       data: Utils.numbers({
+//         count: DATA_COUNT,
+//         min: 0,
+//         max: 100
+//       }),
+//       datalabels: {
+//         anchor: 'start'
+//       }
+//     }]
+//   },
+//   options: {
+//     plugins: {
+//       datalabels: {
+//         backgroundColor: function(context) {
+//           return context.dataset.backgroundColor;
+//         },
+//         borderColor: 'white',
+//         borderRadius: 25,
+//         borderWidth: 2,
+//         color: 'white',
+//         display: function(context) {
+//           var dataset = context.dataset;
+//           var count = dataset.data.length;
+//           var value = dataset.data[context.dataIndex];
+//           return value > count * 1.5;
+//         },
+//         font: {
+//           weight: 'bold'
+//         },
+//         padding: 6,
+//         formatter: Math.round
+//       }
+//     },
+// // Core options
+//     aspectRatio: 4 / 3,
+//     cutoutPercentage: 32,
+//     layout: {
+//       padding: 32
+//     },
+//     elements: {
+//       line: {
+//         fill: false
+//       },
+//       point: {
+//         hoverRadius: 7,
+//         radius: 5
+//       }
+//     },
+//   }
+// }

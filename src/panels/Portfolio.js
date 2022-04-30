@@ -9,8 +9,8 @@ import MultiLinechart from '../components/MultiLinechart.js';
 
 
  function Portfolio() {
-   let primary = 4800000.6;
-   let current = 5242550.9;
+   let primary = 480000.6;
+   let current = 750000;
     return (
       <div>
         <Row>

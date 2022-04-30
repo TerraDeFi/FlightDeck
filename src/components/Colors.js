@@ -1,6 +1,6 @@
 export const chartColors = [
-    "#0dcaf0",
-    "#0dfff0",
+    "#C72377",
+    "#21FFF2",
     "#999933",
     "#666699",
     "#CC9933",

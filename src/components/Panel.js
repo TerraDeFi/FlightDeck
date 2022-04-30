@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 const Panel = ({ name, height, component }) => {
 
     const [ style, setStyle ] = useState({
-        backgroundColor: "#111111",
+        backgroundColor: "#1b1b1b",
         height: height,
     })
 
     return (
-        <div style={style} className="ms-2 p-0 text-white rounded-10" >
+        <div style={style} className="text-white rounded-10" >
             {component}
         </div>
     );
