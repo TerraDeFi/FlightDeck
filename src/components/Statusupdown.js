@@ -5,15 +5,11 @@ const Statusupdown = ({ id, primary, current }) => {
 
     const [upDown, setUpDown] = useState(1);
     const [percent, setPercent] = useState(Number.parseInt(Number.parseFloat(current) / Number.parseFloat(primary) * 100 -100));
-    // let float_percent = Number.parseFloat(current) / Number.parseFloat(primary) * 100 -100;
     
     useEffect(() => {
-        // setPercent(Number.parseInt(Number.parseFloat(current) / Number.parseFloat(primary) * 100 -100));
         if(percent > 0){
-
             setUpDown(1);
         } else {
-
             setUpDown(0);
         }
     }, [])
