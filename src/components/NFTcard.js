@@ -11,7 +11,7 @@ const NFTcard = ({id, primary, current}) => {
         luna_diff = <p className="text-secondary">{luna_percent} Luna</p>
     }
     const nftCardStyle = {
-        backgroundColor: "#000000",
+        backgroundColor: "#000111",
         borderRadius: "10px",
         fontSize: "18px",
         margin: "5px 10px",
