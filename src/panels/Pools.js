@@ -14,7 +14,7 @@ let data = [
 let pools = data.map((pool, index) => {
     return(
         <Row key={pool.id}>
-            <Col><h5>{pool.name}</h5><p>${pool.amount}</p></Col>
+            <Col><h5 style={{color: "#DADADA"}}>{pool.name}</h5><p style={{color: "#A5A5A5"}}>${pool.amount}</p></Col>
             <Col className="text-end"><Statusupdown primary={pool.primary} current={pool.amount} /></Col>
         </Row>
     )
