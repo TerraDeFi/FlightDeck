@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Chart as ChartJS } from "chart.js"
 import { Doughnut } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import chartColors from './Colors'
 
 ChartJS.register(ChartDataLabels)
 
@@ -20,13 +21,10 @@ const Ringchart = ({}) => {
     datasets: [
       {
         data: data,
-        backgroundColor: [ 'cyan', '#2CD000'],
+        backgroundColor: chartColors,
       },
     ],
     labels: ['Luna ', 'UST'],
-    legend: {
-      display: false
-    },
   };
 
   const options = {
@@ -36,7 +34,7 @@ const Ringchart = ({}) => {
     plugins: {
       datalabels: {
         formatter: (value) => {
-          return (value * 100 / total).toFixed(2) + '%'; //doughnut individual value
+          return (value * 100 / total).toFixed(1) + '%'; //doughnut individual value
         },
         color: "red",
         weight: 'bold',

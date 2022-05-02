@@ -1,6 +1,6 @@
 export const chartColors = [
-    "#00FFFF",
-    "#2CD000",
+    "#2FDE00",
+    "#21FFF2",
 ];
 
 export const typeColors = [
