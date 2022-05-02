@@ -2,37 +2,41 @@ import React, { useState} from 'react'
 import { BsFillCaretDownFill, BsArrowUp } from "react-icons/bs";
 
 const comboStyle = {
+    color: "#D5D1D0",
     display: "flex",
-    justify: "between",
-    fontWeight: "700"
+    fontWeight: "700",
+    fontSize: "18px",
+    justifyContent: "between",
+    fontWeight: "900",
 }
 
 export const TokenCombo = ({name}) => {
     return (
-        <div style={comboStyle} className="d-flex justify-content-between">
-            <span><MyIcon name={name.toLowerCase()} size="25"/>{name}</span>
+        <div style={comboStyle} className="d-flex justify-content-between align-items-center">
+            <span><MyIcon name={name.toLowerCase()} size="30"/><span className="ps-1">{name}</span></span>
             <span><BsFillCaretDownFill /></span>
         </div>
     )  
 }
 
-const style={
+const miniButtonStyle={
     backgroundColor: "#2D2D2D",
-    fontSize: "11px",
-    color: "#848E9B",
     borderRadius: "5px",
-    padding: "0px 5px",
-    margin: "2px",
-    height: "20px",
+    border: 0,
+    color: "#848E9B",
     fontWeight: "900",
-    width: "25%",
+    fontSize: "13px",
+    height: "20px",
+    margin: "2px",
+    minWidth: "40px",
+    padding: "0px",
     textAlign: "center",
-    border: 0
+    width: "25%",
 }
 
 export const MiniButton = ({txt}) => {
     return (
-        <button style={style}>
+        <button style={miniButtonStyle}>
             {txt}
         </button>
     )

@@ -18,7 +18,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <div>
-        <ul>
+        <ul className="d-flex justify-content-between">
           <li>
             <Link to="/">Dashboard</Link>
           </li>

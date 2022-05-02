@@ -15,15 +15,15 @@ class Dashboard extends Component {
 
     return (
         <Row style={{color: "white"}} className="p-3 bg-dark">
-            <Col lg={3} md={6} style={{minWidth: "350px"}}>
-                <Panel height="1200px" component={<Left />} bg="#1B1B1B" />
+            <Col lg={3} md={6} sm={12} style={{minWidth: "390px"}}>
+                <Panel component={<Left />} bg="#1B1B1B" />
             </Col>
             <Col className="px-4">
                 <Row>
-                    <Panel  bg="#1B1B1B" height="400px" component={<Righttop />} />
+                    <Panel  bg="#1B1B1B" height="350px" component={<Righttop />} />
                 </Row>
                 <Row className="pt-2">
-                    <Panel  bg="#1B1B1B" height="800px" component={<Rightbottom />} />
+                    <Panel  bg="#1B1B1B" height="400px" component={<Rightbottom />} />
                 </Row>
             </Col>
         </Row>

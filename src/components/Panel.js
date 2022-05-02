@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
 
 const Panel = ({ name, height, component, bg }) => {
 
-    const [ style, setStyle ] = useState({
+    const style = {
         backgroundColor: bg,
         height: height,
-    })
+    }
 
     return (
         <div style={style} className="text-white rounded-10" >
