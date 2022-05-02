@@ -4,6 +4,7 @@ import { Row, Col } from "react-bootstrap"
 import Circledot from '../components/Circledot.js'
 import Ringchart from '../components/Ringchart.js'
 import Icon from "../components/Icon.js"
+import chartColors from "../components/Colors.js"
 
 function Assets() {
 
@@ -16,9 +17,8 @@ function Assets() {
         return (
             <Row key={index} className="pb-2">
                 <Col lg={3} xs={3} md={3} sm={4}>
-                    <Circledot color="#0dcaf0" size="8px" className="col-8"/>
+                    <Circledot color={chartColors[token.id]} size="8px" className="col-8"/>
                     &nbsp;&nbsp;<span>{token.name}</span>
-                    
                 </Col>
                 <Col><Icon name={token.icon} size={18} /></Col>
                 <Col className="ps-0 text-end">
@@ -31,7 +31,7 @@ function Assets() {
     return (
         <div>
             {tokenList}
-            <Ringchart />
+            <Ringchart data={tokens}/>
         </div>
     );
 }
