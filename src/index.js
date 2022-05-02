@@ -7,13 +7,11 @@ import {
   Link
 } from "react-router-dom";
 
-import Dashboard from './pages/Dashboard.js';
-import Anchor from './pages/Anchor.js';
+import Dashboard from './dashboard/Dashboard.js';
+import Borrow from './borrow/Borrow.js';
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
-// import { Route } from 'react-router-dom';
-// import { Router } from 'react-bootstrap-icons';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,7 +23,7 @@ root.render(
             <Link to="/">Dashboard</Link>
           </li>
           <li>
-            <Link to="/anchor">Anchor</Link>
+            <Link to="/borrow">Anchor</Link>
           </li>
           <li>
             <Link to="/cyber">Cyber Deck</Link>
@@ -33,7 +31,7 @@ root.render(
         </ul>
         <Routes>
           <Route exact path="/" element={<Dashboard />} />
-          <Route path="/anchor" element={<Anchor />} />
+          <Route path="/borrow" element={<Borrow />} />
           {/* <Route path="/cyber"><Cyber /></Route> */}
         </Routes>
       </div>

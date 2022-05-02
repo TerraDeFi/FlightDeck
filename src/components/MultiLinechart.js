@@ -1,19 +1,12 @@
 import React from "react"
-import "./Linechart.css"
-
 import { Line } from "react-chartjs-2"
-import { Chart as ChartJS } from 'chart.js'
+import Chart from 'chart.js/auto';
 import {typeColors} from '../components/Colors.js'
 
 let labels = ['Jan', 'Feb', 'Mar', 'Apr', 'Mar', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ];
 
-const plugin = {
-}
-
 const data = {
   labels: labels,
-  // backgroundColor: typeColors,
-  // borderColor: typeColors,
   datasets: [
     {
       label: "Worth",
@@ -47,12 +40,12 @@ const options = {
   }
 }
 
-const LineChart = () => {
+const MultiLinechart = () => {
   return (
     <div className="Linechart">
-      <Line data={data} plugins={plugin} options={options}/>
+      <Line data={data} options={options}/>
     </div>
   );
 }
 
-export default LineChart
+export default MultiLinechart

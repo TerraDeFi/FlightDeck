@@ -2,14 +2,12 @@ import React, {Component} from 'react';
 import { Container, Col, Row, Button } from "react-bootstrap"
 import { BsArrowRight } from "react-icons/bs";
 
-import Potfolio from "../panels/Portfolio.js"
-import NFTs from "../panels/NFTs.js"
-import Assets from "../panels/Assets.js"
-import Pools from "../panels/Pools.js"
+import Potfolio from "./Portfolio.js"
+import NFTs from "./NFTs.js"
+import Assets from "./Assets.js"
+import Pools from "./Pools.js"
 
 import Card from "../components/Card.js"
-import Linechart from "../components/Linechart.js"
-import Piechart from "../components/Piechart.js"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Terra.css';
@@ -42,7 +40,6 @@ class Dashboard extends Component {
             </Col>
             <Col lg={3} md={6} className="pe-2">
                 <Card name="Assets" height="" component={<Assets />} />
-                {/* <Card name="Assets" height="" component={<Piechart />} /> */}
                 <Card name="Pools" height="" component={<Pools />} />
             </Col>
             <Col lg={2} md={6}>

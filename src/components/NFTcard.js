@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 
-import Statusupdown from './Statusupdown';
+import {Statusupdown} from './CommonTags.js';
 
 const NFTcard = ({id, primary, current}) => {
     let luna = 100

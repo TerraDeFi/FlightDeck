@@ -1,10 +1,8 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
-// import { BsArrowDown, BsArrowUp } from "react-icons/bs";
 
-import Linechart from '../components/Linechart.js';
-import Circledot from '../components/Circledot.js';
-import Statusupdown from '../components/Statusupdown.js';
+import {Circledot} from '../components/CommonTags.js';
+import { Statusupdown } from '../components/CommonTags.js';
 import MultiLinechart from '../components/MultiLinechart.js';
 
 

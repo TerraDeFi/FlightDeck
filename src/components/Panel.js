@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const Panel = ({ name, height, component }) => {
+const Panel = ({ name, height, component, bg }) => {
 
     const [ style, setStyle ] = useState({
-        backgroundColor: "#1b1b1b",
+        backgroundColor: bg,
         height: height,
     })
 

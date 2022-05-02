@@ -5,7 +5,7 @@ import NFTcard from '../components/NFTcard.js'
 
 const NFTs = () => {
     let data = [
-        { "id" : "0", "img" : "./nfts/0.png", "primary" : "120", "current" : "200" },
+        { "id" : "0", "img" : "./nfts/0.png", "primary" : "127", "current" : "200" },
         { "id" : "1", "img" : "./nfts/1.png", "primary" : "121", "current" : "131" },
         { "id" : "2", "img" : "./nfts/2.png", "primary" : "200", "current" : "220" },
         { "id" : "3", "img" : "./nfts/3.png", "primary" : "168", "current" : "250" },

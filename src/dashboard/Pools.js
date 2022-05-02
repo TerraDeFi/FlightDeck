@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import {Row, Col} from "react-bootstrap"
 
-import Statusupdown from '../components/Statusupdown.js'
+import {Statusupdown} from '../components/CommonTags.js'
 
 let data = [
     {id: "0", name: "Levana", amount: "25000", primary: "21000"},

@@ -1,0 +1,16 @@
+.rounded-7 {
+    border-radius: 7px;
+}
+.rounded-10 {
+    border-radius: 10px;
+}
+.rounded-top-left-5 {
+    border-top-left-radius: 5px;
+}
+.rounded-top-right-5 {
+    border-top-right-radius: 5px;
+}
+
+.left {
+    min-width: "350px";
+}
