@@ -35,7 +35,6 @@ root.render(
           {/* <Route path="/cyber"><Cyber /></Route> */}
         </Routes>
       </div>
-
     </Router>
   </React.StrictMode>
 );

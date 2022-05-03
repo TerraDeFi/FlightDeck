@@ -10,17 +10,17 @@ import Panel from "../components/Panel.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './borrow.css';
 
-class Dashboard extends Component {
+class Borrow extends Component {
   render() {
 
     return (
         <Row style={{color: "white"}} className="p-3 bg-dark">
-            <Col lg={3} md={6} sm={12} style={{minWidth: "390px"}}>
+            <Col lg={3} md={5} sm={12} style={{minWidth: "390px"}} className="pb-2">
                 <Panel component={<Left />} bg="#1B1B1B" />
             </Col>
             <Col className="px-4">
                 <Row>
-                    <Panel  bg="#1B1B1B" height="350px" component={<Righttop />} />
+                    <Panel  bg="#1B1B1B" component={<Righttop />} />
                 </Row>
                 <Row className="pt-2">
                     <Panel  bg="#1B1B1B" height="400px" component={<Rightbottom />} />
@@ -31,4 +31,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard
+export default Borrow

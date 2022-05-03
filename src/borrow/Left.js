@@ -2,66 +2,23 @@ import React from 'react'
 import {Container, Row, Col, ProgressBar} from 'react-bootstrap'
 import {AiOutlineInfoCircle} from 'react-icons/ai'
 import {ImSwitch} from 'react-icons/im'
+import {BsArrowDownCircle} from 'react-icons/bs'
 
 import Progressbar from '../components/Bar.js'
 import Panel from '../components/Panel.js'
 import Bar from '../components/Bar.js'
 import { MiniButton, TokenCombo, MyIcon } from '../components/CommonTags.js'
-
-const priceStyle = {
-    margin: "0",
-    textAlign: "right",
-    fontWeight: "700",
-    color: "#3DB6DA",
-    fontSize: "20px",
-    height: "23px",
-    position: "relative",
-    top: "-5px"
-}
-
-const infoStyle = {
-    fontWeight: "900",
-    textAlign: "right",
-    color: "#8F8F8F",
-    margin: 0,
-    fontSize: "12px"
-}
-
-const partStyle = {
-    fontWeight: "900",
-    color: "#868686"
-}
-const titlefont = {
-    color: "#CECECE",
-    fontSize: "20px",
-    fontWeight: "900",
-}
-const etcInfoStyle = {
-    display: "flex",
-    color: "#CECECE",
-    fontSize: "16px",
-    fontWeight: "700",
-    justifyContent: "space-between",
-    marginTop: "30px",
-}
-const myButton = {
-    backgroundColor: "#C63399",
-    border: 0,
-    borderRadius: "15px",
-    fontSize: "25px",
-    fontWeight: "700",
-    height: "60px",
-    marginBottom:"20px",
-    marginTop: "30px", 
-    width: "100%",
-
-}
-const coinStyle = {
-    position: "relative",
-    top: "-5px",
-    fontWeight: "900",
-    margin: "5px",
-}
+import { 
+    priceStyle,
+    infoStyle,
+    titleStyle,
+    titlefont,
+    etcInfoStyle,
+    myButton,
+    coinStyle,
+    arrowDownStyle,
+    
+} from "./commonStyle.js"
 
 const ust = (
     <div>
@@ -120,23 +77,32 @@ const Left = () => {
     return (
         <div className="p-4 left justify-content-between">
             <p className="d-flex justify-content-between m-2"><span style={titlefont} className="h4 font-weight-bold">Borrow</span><span style={{fontWeight: "900", color: "#6C757D"}}> Slippage<span className="bg-black ms-1">&nbsp;&nbsp; 5% </span></span></p>
-            <p className="text-secondary mb-1 ms-2">Swap Asset<ImSwitch className="ms-2"/></p>
+            
+            <p style={titleStyle}>Swap Asset <ImSwitch className="mb-1" size={10}/></p>
             <Panel bg="#111111" height="100px" component={ust} />
-            <p className="text-secondary ms-2 mb-1 mt-3">To Collateral<ImSwitch className="ms-2"/></p>
+            
+            <p style={arrowDownStyle}><BsArrowDownCircle size={35}/></p>
+            <div style={{position: "relative", top: "-30px", height: "10px"}}>
+                <p style={titleStyle}>To Collateral <ImSwitch className="mb-1" size={10} /></p>
+            </div>
             <Panel bg="#111111" height="53px" component={collateral} />
-            <div className="d-flex justify-content-between">
-                <p className="text-secondary ms-2 mb-1 mt-3">Total Borrow Usage<ImSwitch className="ms-2"/></p>
-                <div className="d-flex justify-content-between pt-3">
+
+            <p style={arrowDownStyle}><BsArrowDownCircle size={35}/></p>
+            <div style={{position: "relative", top: "-20px", height: "10px"}} className="d-flex justify-content-between">
+                <p style={titleStyle}>Total Borrow Usage</p>
+                <div className="d-flex justify-content-between">
                     <MiniButton txt="25%" />
                     <MiniButton txt="50%" />
                     <MiniButton txt="75%" />
                 </div>
             </div>
-            <Progressbar bgcolor="#40FD9C" progress='75'  height={20} />
-            <p className="text-secondary ms-2 mb-1 mt-3">Borrow</p>
+            
+            <Progressbar bgcolor="#40FD9C" progress='75'  height={15} />
+
+            <p style={titleStyle}>Borrow <ImSwitch className="mb-1" size={10} /></p>
             <Panel bg="#111111" height="100px" component={borrow} />
             <div style={etcInfoStyle}>
-                <span>Full Degen Mode<AiOutlineInfoCircle className="ms-2"/></span>
+                <span>Full Degen Mode <AiOutlineInfoCircle size={10} /></span>
                 <span>
                     <div className="form-check form-switch">
                         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
@@ -144,18 +110,18 @@ const Left = () => {
                 </span>
             </div>
             <div style={etcInfoStyle} >
-                <span>Loophole Factor<AiOutlineInfoCircle className="ms-2"/></span>
+                <span>Loophole Factor <AiOutlineInfoCircle size={10} /></span>
                 <span>1</span>
             </div>
             <div style={etcInfoStyle} >
-                <span>Fee<AiOutlineInfoCircle className="ms-2"/></span>
+                <span>Fee <AiOutlineInfoCircle size={10} /></span>
                 <span>0.1%</span>
             </div>
             <div style={etcInfoStyle} >
-                <span>Price Impact<AiOutlineInfoCircle className="ms-2"/></span>
+                <span>Price Impact <AiOutlineInfoCircle size={10} /></span>
                 <span>0.083435</span>
             </div>
-            <button style={myButton}><span style={coinStyle}><MyIcon name="coinonhand" size={25} /></span>Borrow</button>
+            <button style={myButton}><span style={coinStyle}><MyIcon name="borrow" size={25} /></span>Borrow</button>
         </div>
     )
 }
