@@ -27,7 +27,7 @@ const NFTs = () => {
     })
     
     return (
-        <Row style={gridStyle}>
+        <Row style={gridStyle} className="d-flex justify-content-between">
             {itemList}
         </Row>
     );

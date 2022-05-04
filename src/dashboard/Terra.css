@@ -24,3 +24,30 @@
 .left {
     min-width: "350px";
 }
+
+.help {
+    background-color: magenta;
+    border: 0;
+    border-radius: 20px;
+    bottom: 10px;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    width: 120px;
+}
+
+.chart-switch > button {
+    border: 0;
+    border-radius: "10px";
+    color: "#C4C4C4";
+    font-size: "14px";
+    font-weight: 900;
+}
+
+.chart-switch > .clicked {
+    background-color: black !important;
+    color: green !important;
+}

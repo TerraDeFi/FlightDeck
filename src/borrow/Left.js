@@ -12,7 +12,7 @@ import {
     priceStyle,
     infoStyle,
     titleStyle,
-    titlefont,
+    titleFont,
     etcInfoStyle,
     myButton,
     coinStyle,
@@ -76,7 +76,7 @@ const borrow = (
 const Left = () => {
     return (
         <div className="p-4 left justify-content-between">
-            <p className="d-flex justify-content-between m-2"><span style={titlefont} className="h4 font-weight-bold">Borrow</span><span style={{fontWeight: "900", color: "#6C757D"}}> Slippage<span className="bg-black ms-1">&nbsp;&nbsp; 5% </span></span></p>
+            <p className="d-flex justify-content-between m-2"><span style={titleFont} className="h4 font-weight-bold">Borrow</span><span style={{fontWeight: "900", color: "#6C757D"}}> Slippage<span className="bg-black ms-1">&nbsp;&nbsp; 5% </span></span></p>
             
             <p style={titleStyle}>Swap Asset <ImSwitch className="mb-1" size={10}/></p>
             <Panel bg="#111111" height="100px" component={ust} />

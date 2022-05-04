@@ -28,16 +28,19 @@ const Ringchart = ({}) => {
   };
 
   const options = {
-    legend: {
-      display: false
-    },
     plugins: {
-      datalabels: {
+      legend: { // legend in out of chart
+        display: false,
+      },
+      datalabels: { // 
         formatter: (value) => {
-          return (value * 100 / total).toFixed(1) + '%'; //doughnut individual value
+          return (value * 100 / total).toFixed(1) + '%'; // doughnut individual value
         },
         color: "red",
         weight: 'bold',
+        font: {
+          size: 16
+        }
       },
     }
   }

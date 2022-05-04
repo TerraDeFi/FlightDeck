@@ -66,7 +66,7 @@ export const priceStyle = {
     top: "-5px"
 }
 
-export const titlefont = {
+export const titleFont = {
     color: "#CECECE",
     fontSize: "20px",
     fontWeight: "900",

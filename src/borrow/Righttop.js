@@ -7,7 +7,7 @@ import Progressbar from '../components/Bar.js'
 import { MyIcon, Value } from '../components/CommonTags.js'
 import { CoinInfoCard } from '../components/CommonPanel.js'
 import {
-    titlefont,
+    titleFont,
     titleStyle,
     openButtonStyle,
 } from './commonStyle.js'
@@ -71,7 +71,7 @@ const Righttop = () => {
             <Row className="pt-3 d-flex justify-content-between">
                 <Col md={6} lg={8}>
                     <MyIcon name="anchor" size={25} />
-                    <span style={titlefont} > Your Current Anchor Position</span>
+                    <span style={titleFont} > Your Current Anchor Position</span>
                 </Col>
                 <Col className="text-end">
                     <button style={openButtonStyle}>
@@ -105,8 +105,8 @@ const Righttop = () => {
                         head={<APR title="Collateral Value" value="-4.51" value1="5858.5355"/>}
                         body={
                             <div className="d-flex">
-                                <Col md={5}><ARPAction action="Borrow" value="12.83" /></Col>
-                                <Col md={7}><ARPAction action="Distribution" value="8.32" /></Col>
+                                <Col xs={5}><ARPAction action="Borrow" value="12.83" /></Col>
+                                <Col xs={7}><ARPAction action="Distribution" value="8.32" /></Col>
                             </div>
                         }
                     />
