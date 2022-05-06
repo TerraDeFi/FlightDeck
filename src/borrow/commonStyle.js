@@ -29,7 +29,7 @@ export const infoStyle = {
 }
 
 export const myButton = {
-    backgroundColor: "#C63399",
+    backgroundColor: "#00d9ff",
     border: 0,
     borderRadius: "15px",
     fontSize: "25px",

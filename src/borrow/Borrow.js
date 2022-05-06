@@ -25,7 +25,9 @@ class Borrow extends Component {
                         <Panel  bg="#1B1B1B" component={<Rightbottom />} />
                     </Row>
                 </Col>
-                <button className="help" ><AiOutlineInfoCircle size={20} /> Help</button>
+                <button className="help">
+                    <AiOutlineInfoCircle size={20} /> Help
+                </button>
             </Row>
         )
     }

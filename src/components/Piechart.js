@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import { Chart as ChartJS } from "chart.js"
-import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import Colors from './Colors'
 
 ChartJS.register(ChartDataLabels)
 
-const Ringchart = ({ data }) => {
-
+const Piechart = ({ data }) => {
   const values = data.map((token) => {
-    return token.amount
-  })
-
+      return token.amount
+    })
+  
   const labels = data.map((token) => {
     return token.name
   })
@@ -22,6 +21,7 @@ const Ringchart = ({ data }) => {
   }, 0); // with initial value to avoid when the array is empty
 
   const labelColor = "white"
+    
   // RingChart configuration
   const dataset = {
     datasets: [
@@ -42,7 +42,7 @@ const Ringchart = ({ data }) => {
         formatter: (value) => {
           return (value * 100 / total).toFixed(1) + '%'; // doughnut individual value
         },
-        color: labelColor,
+        color: labelColor, // doughnut individual label color
         weight: 'bold',
         font: {
           size: 14
@@ -70,7 +70,7 @@ const Ringchart = ({ data }) => {
 
   return (
     <div>
-      <Doughnut
+      <Pie
         data={dataset}
         options={options}
         plugins={plugins}
@@ -79,4 +79,4 @@ const Ringchart = ({ data }) => {
   );
 }
 
-export default Ringchart
+export default Piechart

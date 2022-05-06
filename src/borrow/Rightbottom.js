@@ -37,7 +37,7 @@ const Rightbottom = () => {
     return (
         <Container className="p-0 pt-2">
             <Row>
-                <Col lg={3} md={6} sm={6} className="d-flex">
+                <Col lg={3} md={12} sm={12} className="d-flex">
                     <p style={titleFont}>0.0821 UST </p>
                     <p>
                         <MyIcon name="growup" size={25} color="info" />
@@ -56,7 +56,7 @@ const Rightbottom = () => {
                     </ButtonGroup>
                 </Col>
                 <Col lg={3} md={6} sm={6}>
-                    <div className="chart-switch d-flex justify-content-end m-0 p-1 rounded-10" style={{backgroundColor: "#222", width: "fit-content"}} >
+                    <div className="chart-switch d-flex justify-content-end m-2 p-1 rounded-10" style={{backgroundColor: "#222", width: "fit-content"}} >
                         <button
                             className={classnames({ clicked: activeTab === '1' })}
                             onClick={() => { toggle('1'); }}

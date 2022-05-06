@@ -1,5 +1,5 @@
 
-const Panel = ({ name, height, component, bg }) => {
+const Panel = ({ height, component, bg }) => {
 
     const style = {
         backgroundColor: bg,

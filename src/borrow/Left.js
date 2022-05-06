@@ -7,7 +7,11 @@ import {BsArrowDownCircle} from 'react-icons/bs'
 import Progressbar from '../components/Bar.js'
 import Panel from '../components/Panel.js'
 import Bar from '../components/Bar.js'
-import { MiniButton, TokenCombo, MyIcon } from '../components/CommonTags.js'
+import { 
+    MiniButton,
+    TokenCombo,
+    MyIcon 
+} from '../components/CommonTags.js'
 import { 
     priceStyle,
     infoStyle,
@@ -17,13 +21,12 @@ import {
     myButton,
     coinStyle,
     arrowDownStyle,
-    
 } from "./commonStyle.js"
 
 const ust = (
     <div>
         <Container className="p-1 d-flex flex-row">
-            <div  className="pe-2 ps-2 pt-1 bg-dark rounded-top-left-5 col-5 me-1" style={{height: "45px", minWidth: "130px"}}>
+            <div className="pe-2 ps-2 pt-1 bg-dark rounded-top-left-5 col-5 me-1" style={{height: "45px", minWidth: "130px"}}>
                 <TokenCombo name="UST" />
             </div>
             <div className="col bg-dark rounded-top-right-5" style={{height: "45px"}}>
@@ -36,10 +39,10 @@ const ust = (
                 <p style={infoStyle} className="pe-1">Balance: 3601.56</p>
             </div>
         </Container>
-        <div>
-            <p style={priceStyle} className="pe-3">1000</p>
-            <p style={infoStyle} className="pe-3">-1000 UST</p>
-        </div>
+        <Container className="p-1">
+            <p style={priceStyle} className="pe-3">8900</p>
+            <p style={infoStyle} className="pe-3">-8900 UST</p>
+        </Container>
     </div>
 )
 
@@ -66,10 +69,10 @@ const borrow = (
                 <p style={infoStyle} className="pe-1">277302.39</p>
             </div>
         </Container>
-        <div>
+        <Container className="p-1" >
             <p style={priceStyle} className="pe-3">10782.997191</p>
             <p style={infoStyle} className="pe-3">-899.684</p>
-        </div>
+        </Container>
     </div>
 )
 
@@ -99,9 +102,10 @@ const Left = () => {
             
             <Progressbar bgcolor="#40FD9C" progress='75'  height={15} />
 
-            <p style={titleStyle}>Borrow <ImSwitch className="mb-1" size={10} /></p>
-            <Panel bg="#111111" height="100px" component={borrow} />
-            <div style={etcInfoStyle}>
+            {/* <p style={titleStyle}>Borrow <ImSwitch className="mb-1" size={10} /></p>
+            <Panel bg="#111111" height="100px" component={borrow} /> */}
+
+            {/* <div style={etcInfoStyle}>
                 <span>Full Degen Mode <AiOutlineInfoCircle size={10} /></span>
                 <span>
                     <div className="form-check form-switch">
@@ -109,10 +113,11 @@ const Left = () => {
                     </div>
                 </span>
             </div>
+            
             <div style={etcInfoStyle} >
                 <span>Loophole Factor <AiOutlineInfoCircle size={10} /></span>
                 <span>1</span>
-            </div>
+            </div> */}
             <div style={etcInfoStyle} >
                 <span>Fee <AiOutlineInfoCircle size={10} /></span>
                 <span>0.1%</span>

@@ -56,9 +56,11 @@ export const TokenCombo = ({name}) => {
     )  
 }
 
-export const Statusupdown = ({ id, primary, current }) => {
+export const Statusupdown = ({ primary, current }) => {
     const percent = (Number.parseFloat(current) / Number.parseFloat(primary) * 100 -100).toFixed(1);
-    return ( percent >  0 ? (<span style={{marginLeft: '3px', color: "#2FDE00"}}><BsArrowUp />{percent}%</span>) : (<span style={{marginLeft: '3px', color: 'dark'}}></span>)
+    return ( percent >  0 ? 
+          (<span style={{marginLeft: '3px', color: "#2FDE00"}}><BsArrowUp />{percent}%</span>)
+        : (<span style={{marginLeft: '3px', color: 'dark'}}></span>)
     )
 }
 

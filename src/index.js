@@ -9,6 +9,7 @@ import {
 
 import Dashboard from './dashboard/Dashboard.js';
 import Borrow from './borrow/Borrow.js';
+import Cyber from './cyber/Cyber.js';
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
@@ -32,7 +33,7 @@ root.render(
         <Routes>
           <Route exact path="/" element={<Dashboard />} />
           <Route path="/borrow" element={<Borrow />} />
-          {/* <Route path="/cyber"><Cyber /></Route> */}
+          <Route path="/cyber" element={<Cyber />} />
         </Routes>
       </div>
     </Router>

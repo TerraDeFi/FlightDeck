@@ -15,7 +15,7 @@ import {
 const Collateral = ({title, value}) => (
     <div>
         <p style={titleStyle}>{title} <AiOutlineInfoCircle isze={10} /></p>
-        <Value size={20} color={"#A32F76"} value={8323.1640} type={"dolar"} />
+        <Value size={20} color={"#ADD8E6"} value={5433.1640} type={"dolar"} />
     </div>
 )
 
@@ -23,19 +23,19 @@ const APR = ({title, value, value1}) => (
     <div className="d-flex justify-content-between p-0">
         <Col lg={6}>
             <p style={titleStyle}>{title} <AiOutlineInfoCircle size={10} /></p>
-            <Value size={20} color={"#40FD9C"} value={-4.51} type={"percent"} />
+            <Value size={20} color={"#40FD9C"} value={-15.8} type={"percent"} />
         </Col>
         <Col lg={6} className="d-flex align-items-center justify-content-end pe-2">
             <span style={titleStyle} className="pb-4">Borrow Limit: </span>
-            <Value size={13} color={"#A32F76"} value={5858.5355} type={"dolar"} />
+            <Value size={13} color={"#ADD8E6"} value={4534.53} type={"dolar"} />
         </Col>
     </div>
 )
 
 const tokens = [
-    {name: "BLUNA", rate: "112.415", amount: "65.144008" },
-    {name: "BETH", rate: "3494.324", amount: "0"},
-    {name: "WasAvax", rate: "0.981", amount: "0"},
+    {name: "BLUNA", rate: "352.415", amount: "463.000908" },
+    {name: "BETH", rate: "23432.125", amount: "2.3"},
+    {name: "WasAvax", rate: "1.565", amount: "5.2"},
 ]
 
 const TokenList = ({data}) => {

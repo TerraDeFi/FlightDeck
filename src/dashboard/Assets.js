@@ -4,20 +4,21 @@ import { Row, Col } from "react-bootstrap"
 import {Circledot} from '../components/CommonTags.js'
 import Ringchart from '../components/Ringchart.js'
 import {MyIcon} from "../components/CommonTags.js"
-import chartColors from "../components/Colors.js"
+import Purple from "../components/Colors.js"
 
-function Assets() {
+const Assets = () => {
 
-    let tokens = [
-        {id: "0", name: "Luna", amount: "200000"},
-        {id: "1", name: "UST", amount: "500000"},
+    const data = [
+        {id: "0", name: "Luna", amount: 200000},
+        {id: "1", name: "UST", amount: 500000},
+        
     ]
 
-    let tokenList = tokens.map((token, index) => {
+    let tokenList = data.map((token, index) => {
         return (
             <Row key={index} className="pb-2">
                 <Col lg={3} xs={3} md={3} sm={4}>
-                    <Circledot color={chartColors[token.id]} size="8px" className="col-8"/>
+                    <Circledot color={Purple[token.id]} size="8px" className="col-8"/>
                     &nbsp;&nbsp;<span>{token.name}</span>
                 </Col>
                 <Col><MyIcon name={token.name.toLowerCase()} size={18} /></Col>
@@ -31,7 +32,7 @@ function Assets() {
     return (
         <div>
             {tokenList}
-            <Ringchart data={tokens}/>
+            <Ringchart data={data}/>
         </div>
     );
 }

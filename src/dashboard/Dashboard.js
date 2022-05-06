@@ -2,19 +2,17 @@ import React, {Component} from 'react';
 import { Container, Col, Row, Button } from "react-bootstrap"
 import { BsArrowRight } from "react-icons/bs";
 
-import Potfolio from "./Portfolio.js"
 import NFTs from "./NFTs.js"
-import Assets from "./Assets.js"
 import Pools from "./Pools.js"
+import Assets from './Assets'
 
 import Card from "../components/Card.js"
+import MultiLinechart from "../components/MultiLinechart.js"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Terra.css';
 
-class Dashboard extends Component {
-  render() {
-
+const Dashboard = () => {
     const leftStyle = {
       width: "100px",
       backgroundColor: "black",
@@ -35,21 +33,34 @@ class Dashboard extends Component {
           <Row className="p-4 bg-dark">
             <h3>Dashboard</h3> 
             <Col lg={7} md={12}>
-                <Card name="Portfolio" height="" component={<Potfolio />} />
-                <Card name="NFTs" height="" component={<NFTs />} />
+                <Card 
+                  name="Portfolio"
+                  theme="black"
+                  element={<MultiLinechart colors={{line: ["magenta", "cyan"], label: "white", theme: "black"}} />} />
+                <Card
+                  name="NFTs"
+                  theme="black"
+                  element={<NFTs color="black" size="100"/>} />
             </Col>
             <Col lg={3} md={6} className="pe-2">
-                <Card name="Assets" height="" component={<Assets />} />
-                <Card name="Pools" height="" component={<Pools />} />
+                <Card
+                  name="Assets"
+                  theme="black"
+                  element={<Assets />} />
+                <Card
+                  name="Pools"
+                  theme="black"
+                  element={<Pools />} />
             </Col>
             <Col lg={2} md={6}>
-              <Button className="btn btn-dark btn-outline-info mt-2 rounded-7 fs-5"><span className="text-white"> Link Wallet </span><BsArrowRight className="ms-2"/></Button>
+              <Button className="btn btn-dark btn-outline-info mt-2 rounded-7 fs-5">
+                <span className="text-white"> Link Wallet </span>
+                <BsArrowRight className="ms-2"/></Button>
             </Col>
           </Row>
         </Col>
       </Row>
     )
-  }
 }
 
 export default Dashboard

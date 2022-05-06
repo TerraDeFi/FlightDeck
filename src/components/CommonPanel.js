@@ -1,7 +1,5 @@
 import React from 'react'
 import Colors from './Colors.js'
-import { Container, Row, Col } from 'react-bootstrap'
-import { AiOutlineInfoCircle } from 'react-icons/ai'
 
 export const CoinInfoCard = ({ head, body }) => {
 
