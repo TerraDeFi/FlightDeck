@@ -1,5 +1,6 @@
 import React, { useState} from 'react'
-import { BsFillCaretDownFill, BsArrowUp } from "react-icons/bs";
+// import fs from 'fs'
+import { BsFillCaretDownFill, BsArrowUp, BsArrowDown } from "react-icons/bs";
 
 export const Circledot = ({ color, size }) => {
     const dotStyle = {
@@ -36,7 +37,12 @@ export const MiniButton = ({txt}) => {
 }
 
 export const MyIcon = ({name, size}) => {
-    return <img src={require("../img/"+name.toLowerCase()+".png")} width={size} height={size}></img>
+    const path = "../img/"+name.toLowerCase()+".png"
+    // if (fs.existsSync(path)){
+        return <img src={require("../img/"+name.toLowerCase()+".png")} width={size} height={size}></img>
+    // } else {
+    //     return ""
+    // }
 }
 
 export const TokenCombo = ({name}) => {
@@ -56,11 +62,17 @@ export const TokenCombo = ({name}) => {
     )  
 }
 
-export const Statusupdown = ({ primary, current }) => {
+export const Statusupdown = ({ primary, current, down }) => {
     const percent = (Number.parseFloat(current) / Number.parseFloat(primary) * 100 -100).toFixed(1);
+    let downIcon = ""
+
+    if(down == "show") {
+        downIcon = (<BsArrowUp />+percent + "%")
+    }
+
     return ( percent >  0 ? 
           (<span style={{marginLeft: '3px', color: "#2FDE00"}}><BsArrowUp />{percent}%</span>)
-        : (<span style={{marginLeft: '3px', color: 'dark'}}></span>)
+        : (<span style={{marginLeft: '3px', color: 'red'}}><BsArrowDown />{percent}%</span>)
     )
 }
 
