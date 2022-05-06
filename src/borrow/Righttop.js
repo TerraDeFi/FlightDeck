@@ -15,7 +15,7 @@ import {
 const Collateral = ({title, value}) => (
     <div>
         <p style={titleStyle}>{title} <AiOutlineInfoCircle isze={10} /></p>
-        <Value size={20} color={"#ADD8E6"} value={5433.1640} type={"dolar"} />
+        <Value size={20} color={"cyan"} value={5433.1640} type={"dolar"} />
     </div>
 )
 
@@ -23,11 +23,11 @@ const APR = ({title, value, value1}) => (
     <div className="d-flex justify-content-between p-0">
         <Col lg={6}>
             <p style={titleStyle}>{title} <AiOutlineInfoCircle size={10} /></p>
-            <Value size={20} color={"#40FD9C"} value={-15.8} type={"percent"} />
+            <Value size={20} color={"magenta"} value={-15.8} type={"percent"} />
         </Col>
         <Col lg={6} className="d-flex align-items-center justify-content-end pe-2">
             <span style={titleStyle} className="pb-4">Borrow Limit: </span>
-            <Value size={13} color={"#ADD8E6"} value={4534.53} type={"dolar"} />
+            <Value size={13} color={"cyan"} value={4534.53} type={"dolar"} />
         </Col>
     </div>
 )
