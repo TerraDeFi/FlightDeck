@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import { Container, Col, Row, Button } from "react-bootstrap"
+import React from 'react';
+import { Col, Row, Button } from "react-bootstrap"
 import { BsArrowRight } from "react-icons/bs";
 
 import NFTs from "./NFTs.js"
@@ -10,7 +10,6 @@ import Card from "../components/Card.js"
 import MultiLinechart from "../components/MultiLinechart.js"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Terra.css';
 
 const Dashboard = () => {
     const leftStyle = {

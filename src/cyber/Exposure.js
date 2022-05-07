@@ -3,7 +3,6 @@ import { Row, Col } from "react-bootstrap"
 
 import {Circledot} from '../components/CommonTags.js'
 import Ringchart from '../components/Ringchart.js'
-import {MyIcon} from "../components/CommonTags.js"
 import Colors from "../components/Colors.js"
 
 const Exposure = () => {

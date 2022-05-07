@@ -8,7 +8,6 @@ import Rightbottom from "./Rightbottom.js"
 import Panel from "../components/Panel.js"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './borrow.css';
 
 class Borrow extends Component {
     render() {

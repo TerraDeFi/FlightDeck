@@ -37,12 +37,15 @@ export const MiniButton = ({txt}) => {
 }
 
 export const MyIcon = ({name, size}) => {
-    const path = "../img/"+name.toLowerCase()+".png"
-    // if (fs.existsSync(path)){
+    try{
+        const path = "../img/"+name.toLowerCase()+".png"
         return <img src={require("../img/"+name.toLowerCase()+".png")} width={size} height={size}></img>
-    // } else {
-    //     return ""
-    // }
+    }
+    catch(err){
+        //Do whatever you want when the image failed to load here
+        return ""
+    }
+
 }
 
 export const TokenCombo = ({name}) => {
@@ -83,6 +86,7 @@ export const Value = ({size, color, value, type}) => {
         fontWeight: 700,
         marginLeft: "7px",
     }
+    
     if(type == "percent") {
         return <span style={style}>{value} %</span>
     } else if(type == "dolar")  {

@@ -1,4 +1,7 @@
 body {
+  background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +13,129 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.chart-switch > button {
+  border: 0;
+  border-radius: "10px";
+  color: "#C4C4C4";
+  font-size: "14px";
+  font-weight: 900;
+}
+
+.chart-switch > .clicked {
+  background-color: black !important;
+  color: green !important;
+}
+
+.cyber-body {
+  /* background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.help {
+  background-color: #00d9ff;
+  border: 0;
+  border-radius: 20px;
+  bottom: 10px;
+  color:black;
+  font-weight: 900;
+  font-size: 20px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  width: 120px;
+}
+
+.fix-div {
+
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+
+
+.fix-button {
+  background-color: #261C3F !important;
+  border-radius: 25PX;
+  border: 0;
+  height: 50px;
+  font-weight: 700;
+  color: White;
+  margin-right: 20px;
+  padding: 10px;
+  width: 150px;
+}
+
+
+.left {
+  min-width: "350px";
+}
+
+.menu > button {
+  background-color: #191133;
+  border-color: #191235;
+  border: 0;
+  height: 38px;
+  padding: 6px;
+  margin-bottom: 15px;
+}
+
+.menu > button:hover {
+  background-color: #6947B4 !important;
+  border-color: #32235D !important;
+  border-radius: 100%;
+}
+
+.menu > .clicked {
+  background-color: #6947B4 !important;
+  border-color: #32235D !important;
+  border-radius: 100%;
+}
+
+.min-400 {
+  min-width: 350px;
+}
+
+.rounded-7 {
+  border-radius: 7px;
+}
+
+.rounded-10 {
+  border-radius: 10px;
+}
+
+.rounded-top-left-5 {
+  border-top-left-radius: 5px;
+}
+
+.rounded-top-right-5 {
+  border-top-right-radius: 5px;
+}
+
+.rounded-top-10 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.rounded-bottom-10 {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.text-gray {
+  /* background-color: "#1B1235";
+  padding: "20px"; */
+  color: #696E79;
+}
+
+.sub-info {
+  color: #696E79;
+}
+
+@media only screen and (max-width: 515px) {
+  .cyber-menu {
+      display: none
+  }
 }
