@@ -11,7 +11,7 @@ import {
 
 import Line from '../components/LineChart.js'
 import { titleFont } from './commonStyle.js'
-import { MyIcon, ChartButton } from '../components/CommonTags'
+import { MyIcon } from '../components/CommonTags'
 
 const Rightbottom = () => {
 

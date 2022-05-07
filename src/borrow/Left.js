@@ -1,12 +1,11 @@
 import React from 'react'
-import {Container, Row, Col, ProgressBar} from 'react-bootstrap'
+import {Container} from 'react-bootstrap'
 import {AiOutlineInfoCircle} from 'react-icons/ai'
 import {ImSwitch} from 'react-icons/im'
 import {BsArrowDownCircle} from 'react-icons/bs'
 
 import Progressbar from '../components/Bar.js'
 import Panel from '../components/Panel.js'
-import Bar from '../components/Bar.js'
 import { 
     MiniButton,
     TokenCombo,
