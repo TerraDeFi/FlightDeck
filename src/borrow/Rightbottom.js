@@ -41,7 +41,7 @@ const Rightbottom = () => {
                     <p style={titleFont}>0.0821 UST </p>
                     <p>
                         <MyIcon name="growup" size={25} color="info" />
-                        <span style={{fontWeight: 900, fontSize: "20px", color: "#6ED8DD"}}> 1.58%</span>
+                        <span style={{fontWeight: 900, fontSize: "20px", color: "#6ED8DD"}}> 0.8%</span>
                     </p>
                 </Col >
                 <Col className="d-flex justify-content-center">

@@ -51,20 +51,21 @@ const Ringchart = ({ data }) => {
     }
   }
 
+  // add Label to center of Chart
   const plugins = [{
     beforeDraw: function(chart) {
      var width = chart.width,
          height = chart.height,
          ctx = chart.ctx;
-         ctx.restore();
+        //  ctx.restore();
          var fontSize = (height / 200).toFixed(2);
-         ctx.font = "20px sans-serif #fff";
-         ctx.textBaseline = "top";
-         var text = "dsfdsf",
-         textX = Math.round((width - ctx.measureText(text).width) / 2),
-         textY = height / 2;
-         ctx.fillText(text, textX, textY);
-         ctx.save();
+         ctx.font = fontSize + "em sans-serif #444444";
+         ctx.textBaseline = "center";
+        var text = "Assets",
+        textX = Math.round((width - ctx.measureText(text).width) / 2),
+        textY = height / 2;
+        ctx.fillText(text, textX, textY);
+        ctx.save();
     } 
   }]
 
